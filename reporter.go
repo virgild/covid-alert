@@ -9,7 +9,7 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
-const pageURL = `https://unityhealth.to/patients-and-families/coronavirus-information-for-patients-and-families/`
+const pageURL = `https://unityhealth.to/patients-and-visitors/covid-19/`
 
 func getPageReport() (*Report, error) {
 	res, err := http.Get(pageURL)
