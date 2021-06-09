@@ -37,18 +37,18 @@ func getPageReport() (*Report, error) {
 	// 	log.Info().Msgf("%d. %s", i, n)
 	// }
 
-	icuCount, err := strconv.Atoi(nodes[5])
+	icuCount, err := strconv.Atoi(nodes[1])
 	if err != nil {
 		return nil, fmt.Errorf("convert icu count: %w", err)
 	}
 
-	inpatientCount, err := strconv.Atoi(nodes[6])
+	inpatientCount, err := strconv.Atoi(nodes[2])
 	if err != nil {
 		return nil, fmt.Errorf("convert inpatients count: %w", err)
 	}
 
 	report := &Report{
-		Location:       nodes[4],
+		Location:       nodes[0],
 		ICUUnits:       icuCount,
 		InpatientUnits: inpatientCount,
 		Time:           time.Now(),
